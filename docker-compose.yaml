@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: "postgres:16"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: rank_righ
+
+volumes:
+  db_data:
