@@ -24,9 +24,4 @@ public class EvaluationAssembler {
                 .map(EvaluationResponse::new)
                 .toList();
     }
-
-    public static EvaluationResponse toResponseModel(Evaluation evaluation) {
-        return new EvaluationResponse(evaluation.getEmail(), evaluation.getRating(), evaluation.getObservations(),
-                evaluation.getContactInfo());
-    }
 }
